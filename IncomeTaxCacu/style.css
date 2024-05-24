@@ -15,7 +15,10 @@ body {
   .App {
     text-align: center;
   }
-  
+  .content{
+    border: 1px solid black;
+  }
+
   .input-group {
     margin: 10px 20px;
   }
@@ -30,7 +33,6 @@ body {
     padding: 5px 10px;
     border: 1px solid #eee;
     width: 300px;
-    max-width: calc(100% - 30px);
     margin: auto;
   }
   
@@ -55,3 +57,15 @@ body {
   td:last-child {
     text-align: center;
   }
+  .button_search {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
