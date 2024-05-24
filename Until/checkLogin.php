@@ -53,6 +53,3 @@ $password = $_POST['password'];
 authenticate_user($username, $password);
 ?>
 
-<html>
-    <a href="/tester/Danh-Gia-Kiem-Dinh-Phan-Mem/IncomeTaxCacu/index.html"></a>
-</html>
