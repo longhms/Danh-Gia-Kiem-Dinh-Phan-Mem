@@ -13,15 +13,13 @@ code {
 }
   
 .App {
-    text-align: center;
-    max-width: auto;
+    align-items: center;
+    width: 100%;
     height: auto;
+    margin-left: 500px;
+    margin-right: 500px;
 }
-.content {
-    border: 1px solid black; 
-    margin-left: 400px;
-    margin-right: 400px;
-}
+
 
   
 .input-group {
@@ -37,7 +35,7 @@ input {
     line-height: 30px;
     padding: 5px 10px;
     border: 1px solid #eee;
-    width: 300px;
+    width: 200px;
     margin: auto;
 }
   
@@ -64,17 +62,4 @@ th,
 td:last-child {
     text-align: center;
 }
-.button_search {
-  margin-top: 40px;
-  border-radius: 20px;
-  border: 1px solid #FF4B2B;
-  background-color: #FF4B2B;
-  color: #FFFFFF;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
 

@@ -158,9 +158,4 @@ function tick() {
   document.getElementById('root'));
 
 }
-// Example func.js content
-document.getElementById('search').addEventListener('click', function() {
-    alert('Tính toán thuế');
-    // Thêm mã xử lý tính toán thuế của bạn ở đây
-});
 tick();
