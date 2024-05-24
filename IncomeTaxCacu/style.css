@@ -6,18 +6,29 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-  
+ 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
 }
-  
+
+.header{
+    align-items: center;
+}
+.titles{
+    text-align: center;
+    
+}
+.title-small{
+    font-weight: 500;
+}
 .App {
     align-items: center;
     width: 100%;
     height: auto;
-    margin-left: 500px;
+    margin-left: 400px;
     margin-right: 500px;
+    margin-top: 100px;
 }
 
 
@@ -35,7 +46,7 @@ input {
     line-height: 30px;
     padding: 5px 10px;
     border: 1px solid #eee;
-    width: 200px;
+    width: 300px;
     margin: auto;
 }
   
