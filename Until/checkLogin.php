@@ -37,9 +37,10 @@ function authenticate_user($username, $password) {
     // }
     if ($result && $result->num_rows > 0) {
         echo "<p>Welcome, username!</p>";
+        echo '<a href="/tester/Danh-Gia-Kiem-Dinh-Phan-Mem/IncomeTaxCacu/index.html"> check me </a>';
     } else {
         echo "<b>Username hoặc password sai. Vui lòng nhập lại.</b>";
-        echo '<a href="login.html">Quay lại</a>';
+        echo '<a href="loginn.html">Quay lại</a>';
     }
 
     // Đóng kết nối
@@ -51,3 +52,7 @@ $username = $_POST['username'];
 $password = $_POST['password']; 
 authenticate_user($username, $password);
 ?>
+
+<html>
+    <a href="/tester/Danh-Gia-Kiem-Dinh-Phan-Mem/IncomeTaxCacu/index.html"></a>
+</html>
