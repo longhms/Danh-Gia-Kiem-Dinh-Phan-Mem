@@ -8,9 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(/img/1-huong-dan-hach-toan-thue-tncn-theo-thong-tu-200-2014-tt-btc.jpg);
 }
-
 header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -100,53 +98,21 @@ nav ul li a:hover {
 .logout-btn:hover {
     background-color: #5a32b1;
 }
-.hero {
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-color: #D9AFD9;
-    background-image: linear-gradient(230deg, #D9AFD9 0%, #97D9E1 100%);
+.Image_tax img{
+    max-width: 100%;
+   margin-right: 10px;
+   width: 2000px;
+   height: 500px;
+}
+.Text_tax{
+    padding: 20px 180px 20px 180px;
+    margin: 10px 100px 10px 100px;
+}
+.Text_tax h1{
+    text-align: center;  
+    font-size: 0.7cm; 
+}
+.Text_tax h2{
     text-align: center;
-    padding: 100px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:578px ;
-}
-
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-   
-}
-
-.hero:not(.hero-content){
-    opacity: 80%;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #080808;
-    font-weight: 600;
-}
-
-.hero .hero-content .btn {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: #3b56f5;
-    color: #222121;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #080808;
+   font-size: 0.4cm;
 }
