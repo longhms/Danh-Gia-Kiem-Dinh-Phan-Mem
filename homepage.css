@@ -1,5 +1,8 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -11,14 +14,17 @@ header {
     padding: 20px;
 }
 
-.content {
-    width: 100%;
-    height: 100%;
+h1 {
+    color: #007bff;
 }
 
-img {
+.btn-lg {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.25rem;
+}
+
+.img-fluid {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
