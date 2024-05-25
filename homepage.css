@@ -28,3 +28,8 @@ h1 {
     max-width: 100%;
     height: auto;
 }
+
+.d-flex {
+    display: flex;
+    gap: 10px;
+}
