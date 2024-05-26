@@ -230,6 +230,20 @@ input {
     width: 40px;
 }
 
+input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #4CAF50; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Không viền */
+    border-radius: 5px; /* Bo góc */
+    cursor: pointer; /* Con trỏ hiển thị khi di chuột */
+    float: right;
+}
+
 footer {
     background-color: #222;
     color: #fff;

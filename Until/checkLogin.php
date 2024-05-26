@@ -10,6 +10,9 @@
 </body>
 </html>
 <?php
+
+session_start();
+
 function authenticate_user($username, $password) {
     $servername = "localhost"; // Hoặc IP của máy chủ MySQL
     $db_username = "root"; // Tên người dùng MySQL
@@ -36,6 +39,9 @@ function authenticate_user($username, $password) {
     //     print_r($row); // In ra mảng dữ liệu của hàng
     // }
     if ($result && $result->num_rows > 0) {
+
+        $_SESSION['username'] = $username;
+
         header("Location: /homepage.html"); // Chuyển hướng đến trang homepage.html
         exit();
     } else {

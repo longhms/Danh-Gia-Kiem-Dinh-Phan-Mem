@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="khaiThue.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/logo.jpg" alt="DreamSoft">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/homepage.html">Trang Chủ</a></li>
+                    <li><a href="/GioiThieu.html">Giới Thiệu</a></li>
+                    <li><a href="/IncomeTaxCacu/index.html">Công Cụ</a></li>
+                    <li><a href="#">Khai Thuế</a></li>
+                    <li><a href="#">Thư Viện</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" class="search-input" placeholder="Search...">
+                <a href="/loginn.html"><button class="logout-btn">Logout</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="header" class="header">
+            <div class = "titles">
+                <h1 class = "title-large">HỆ THỐNG KHAI THUẾ THU NHẬP CÁ NHÂN</h1>
+            </div>
+        </div>
+
+        <div class="App">
+            <form action="/IncomeTaxCacu/process.php" method="post">
+                <div class="content">
+                    <div class="input-group">
+                        <label for="income">Tổng thu nhập:</label>
+                        <input name="income" id="income" placeholder="Tổng thu nhập" type="number">
+                    </div>
+                    <div class="input-group">
+                        <label for="dependents">Số người phụ thuộc:</label>
+                        <input name="dependents" id="dependents" placeholder="Người phụ thuộc" type="number">
+                    </div>
+                </div>
+    
+                <button class="button1" type="submit">Khai Thuế</button>
+            </form>
+    
+            <div>
+                <button class="button1">Nộp Thuế</button>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
