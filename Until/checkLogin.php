@@ -36,11 +36,11 @@ function authenticate_user($username, $password) {
     //     print_r($row); // In ra mảng dữ liệu của hàng
     // }
     if ($result && $result->num_rows > 0) {
-        echo "<p>Welcome, username!</p>";
-        echo '<a href="/tester/Danh-Gia-Kiem-Dinh-Phan-Mem/IncomeTaxCacu/index.html"> check me </a>';
+        header("Location: /homepage.html"); // Chuyển hướng đến trang homepage.html
+        exit();
     } else {
-        echo "<b>Username hoặc password sai. Vui lòng nhập lại.</b>";
-        echo '<a href="loginn.html">Quay lại</a>';
+        header("Location: /loginn.html?error=1"); // Chuyển hướng lại trang đăng nhập với tham số lỗi
+        exit();
     }
 
     // Đóng kết nối

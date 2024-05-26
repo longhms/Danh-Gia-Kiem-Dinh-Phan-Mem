@@ -4,75 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestTax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <title>TestTax</title>
 </head>
 
 <body>
-    <div id="root">
-        <div class="App">
-            <div class="input-group"><label>Tổng thu nhập:</label><input placeholder="Tổng thu nhập" type="number"
-                    value="8000000"></div>
-            <div class="input-group"><label>Số người phụ thuộc:</label><input placeholder="Người phụ thuộc"
-                    type="number" value="1"></div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td colspan="3">Tổng thu nhập</td>
-                        <td><b>₫8,000,000</b></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Giảm trừ cá nhân</td>
-                        <td>₫11,000,000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Giảm trừ phụ thuộc</td>
-                        <td>-₫8,800,000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Số tiền tính thuế thu nhập cá nhân</td>
-                        <td>₫5,800,000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Thuế phải nộp</td>
-                        <td>₫330,000</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Số tiền được lĩnh</td>
-                        <td><b>₫7,670,000</b></td>
-                    </tr>
-                    <tr>
-                        <th>Bậc</th>
-                        <th>Thu nhập tính thuế/tháng</th>
-                        <th>Thuế suất</th>
-                        <th>Số tiền</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Đến 5 triệu đồng (trđ)</td>
-                        <td>5%</td>
-                        <td>₫250,000</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Trên 5 trđ đến 10 trđ</td>
-                        <td>10%</td>
-                        <td>₫80,000</td>
-                    </tr>
-                </tbody>
-            </table>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/logo.jpg" alt="DreamSoft">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/homepage.html">Trang Chủ</a></li>
+                    <li><a href="/GioiThieu.html">Giới Thiệu</a></li>
+                    <li><a href="#">Công Cụ</a></li>
+                    <li><a href="#">Thư Viện</a></li>
+                    <li><a href="#">Dịch Vụ</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" class="search-input" placeholder="Search...">
+                <a href="loginn.html"><button class="logout-btn">Logout</button></a>
+            </div>
         </div>
-    </div>
+    </header>
+    <main>
+        <div id="header" class="header">
+            <div class = "titles">
+                <h1 class = "title-large">HỆ THỐNG TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+                <h3 class = "title-small">Chỉ cần điền Tổng thu nhập, bạn sẽ biết ngay mức thuế TNCN phải nộp</h3>
+            </div>
+        </div>
+        <div id="root">
+            <div class="App">
+                <div class="content">
+                    <div class="input-group">
+                        <label for="income">Tổng thu nhập:</label>
+                        <input id="income" placeholder="Tổng thu nhập" type="number" value="8000000">
+                    </div>
+                    <div class="input-group">
+                        <label for="dependents">Số người phụ thuộc:</label>
+                        <input id="dependents" placeholder="Người phụ thuộc" type="number" value="1">
+                    </div>
+                </div> 
+                <div class="table">
+                    <table id="result-table">
+                        <tbody>
+                            <tr>
+                                <td colspan="3">Tổng thu nhập</td>
+                                <td><b>₫8,000,000</b></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Giảm trừ cá nhân</td>
+                                <td>₫11,000,000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Giảm trừ phụ thuộc</td>
+                                <td>-₫8,800,000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Số tiền tính thuế thu nhập cá nhân</td>
+                                <td>₫5,800,000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Thuế phải nộp</td>
+                                <td>₫330,000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Số tiền được lĩnh</td>
+                                <td><b>₫7,670,000</b></td>
+                            </tr>
+                            <tr>
+                                <th>Bậc</th>
+                                <th>Thu nhập tính thuế/tháng</th>
+                                <th>Thuế suất</th>
+                                <th>Số tiền</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Đến 5 triệu đồng (trđ)</td>
+                                <td>5%</td>
+                                <td>₫250,000</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Trên 5 trđ đến 10 trđ</td>
+                                <td>10%</td>
+                                <td>₫80,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                  
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Thêm nội dung chân trang nếu cần -->
+    </footer>
     <script src="https://unpkg.com/react/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
-    <script src="func.js">
-        
-    </script>
-
-
-    <script
-        src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
-
-
-
+    <script src="func.js"></script>
+    <script src="/homepage.js"></script>
 </body>
+
+</html>

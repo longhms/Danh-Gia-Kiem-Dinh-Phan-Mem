@@ -158,5 +158,4 @@ function tick() {
   document.getElementById('root'));
 
 }
-
 tick();

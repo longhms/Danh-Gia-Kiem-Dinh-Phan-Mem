@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #7a42f4;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    color: #7a42f4;
+}
+
+.search-input {
+    display: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 0;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.search-input.active {
+    display: block;
+}
+
+.search-input:focus {
+    outline: none;
+    border-bottom-color: #7a42f4;
+}
+
+.logout-btn {
+    background-color: #7a42f4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background-color: #5a32b1;
+}
+.Image_tax img{
+    max-width: 100%;
+   margin-right: 10px;
+   width: 2000px;
+   height: 500px;
+}
+.Text_tax{
+    padding: 20px 180px 20px 180px;
+    margin: 10px 100px 10px 100px;
+}
+.Text_tax h1{
+    text-align: center;  
+    font-size: 0.7cm; 
+}
+.Text_tax h2{
+    text-align: center;
+   font-size: 0.4cm;
+}

@@ -6,11 +6,70 @@
     <link rel="stylesheet" href="loginn.css">
     <title>Document</title>
 </head>
-<body>
+<style>
+    .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+
+    }
+
+    .alert2 {
+    padding: 20px;
+    background-color: #36f44f;
+    color: white;
+    
+    }
+
+    .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+    .closebtn:hover {
+    color: black;
+    }
+    .fixed-top-right {
+    z-index: 1001;
+    border-radius: 7px;
+    position: fixed;
+    gap: 5px;
+    align-items: center;
+    display: flex;
+    width: 290px;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 18px;
+    margin-top: 80px;
+    }
+</style>
+<body style="background-size: cover; background-image: url(/img/Screen-Shot-2019-07-29-at-16.28.13.webp);">
+    <div class="alert fixed-top-right" id="errorSI" style="display: none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <span style="font-size: 30px;order: 3;" class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Thông tin đăng nhập không đúng!</strong>
+    </div>
+    <div class="alert fixed-top-right" id="errorSU" style="display: none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <span style="font-size: 30px;order: 3;" class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Username đã tồn tại, Hãy nhập lại!</strong>
+    </div>
+    <div class="alert2 fixed-top-right" id="compSU" style="display: none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <span style="font-size: 30px;order: 3;" class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Đăng kí thành công tài khoản!</strong>
+    </div>
     <h2>Sign in/up Form</h2>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="./Until/register.php" method="post">
+            <form action="/Until/register.php" method="post">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -18,14 +77,15 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input name="username" type="text" placeholder="Name" />
-                <input name="realName" type="text" placeholder="Email" />
+                <input name="username" type="text" placeholder="Username" />
+                <input name="realName" type="text" placeholder="Real Name" />
                 <input name="password" type="password" placeholder="Password" />
                 <button>Sign Up</button>
+                
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="./Until/checkLogin.php" method="post">
+            <form action="/Until/checkLogin.php" method="post">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -33,10 +93,11 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input name="username" type="text" placeholder="Email" />
+                <input name="username" type="text" placeholder="Username" />
                 <input name="password" type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
                 <button>Sign In</button>
+                
             </form>
         </div>
         <div class="overlay-container">
@@ -56,5 +117,6 @@
     </div>
 
     <script src="loginn.js"></script>
+    
 </body>
 </html>
