@@ -32,13 +32,14 @@ function register_user($username, $realName, $password) {
     $result = $conn->query($sql_check_user);
 
     if ($result && $result->num_rows > 0) {
-        echo "<b>Username đã tồn tại. Vui lòng chọn tên khác.</b>";
-        echo '<a href="login.html">Quay lại</a>';
+        header("Location: /loginn.html?errorSU=1"); // Chuyển hướng lại trang đăng nhập với tham số lỗi
+        exit();
     } else {
         // Chèn user mới vào bảng tblUsers
         $sql_insert_user = "INSERT INTO `tblUsers` (`id`, `username`, `realName`, `password`,`income`,`snpt`) VALUES ('$user_id', '$username', '$realName', '$password','$user_IC','$user_SNPT')";
         if ($conn->query($sql_insert_user) === TRUE) {
-            echo "Đăng ký thành công. Vui lòng <a href='login.html'>đăng nhập</a>.";
+            header("Location: /loginn.html?compSU=1"); // Chuyển hướng lại trang đăng nhập với tham số lỗi
+            exit();
         } else {
             echo "Lỗi khi đăng ký: " . $conn->error . "<br>";
         }
