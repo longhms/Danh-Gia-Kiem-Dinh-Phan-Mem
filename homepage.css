@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(/img/1-huong-dan-hach-toan-thue-tncn-theo-thong-tu-200-2014-tt-btc.jpg);
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #7a42f4;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    color: #7a42f4;
+}
+
+.search-input {
+    display: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 0;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.search-input.active {
+    display: block;
+}
+
+.search-input:focus {
+    outline: none;
+    border-bottom-color: #7a42f4;
+}
+
+.logout-btn {
+    background-color: #7a42f4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background-color: #5a32b1;
+}
+.hero {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(230deg, #D9AFD9 0%, #97D9E1 100%);
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:578px ;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+.hero:not(.hero-content){
+    opacity: 80%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #080808;
+    font-weight: 600;
+}
+
+.hero .hero-content .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #3b56f5;
+    color: #222121;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #080808;
+}
