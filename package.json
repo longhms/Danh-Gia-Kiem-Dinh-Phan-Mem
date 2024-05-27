@@ -2,9 +2,12 @@
   "name": "danh-gia-kiem-dinh-phan-mem",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "homepage.js",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "chai": "^5.1.1",
+    "jest": "^29.7.0",
+    "mocha": "^10.4.0"
   },
   "scripts": {
     "test": "jest"
