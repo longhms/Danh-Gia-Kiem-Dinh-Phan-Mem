@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="taxCacu.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/logo.jpg" alt="DreamSoft">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/homepage.html">Trang Chủ</a></li>
+                    <li><a href="/GioiThieu.html">Giới Thiệu</a></li>
+                    <li><a href="/IncomeTaxCacu/taxCacu.html">Công Cụ</a></li>
+                    <li><a href="/KTnLTT/khaiThue.html">Khai Thuế</a></li>
+                    <li><a href="#">Thư Viện</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" class="search-input" placeholder="Search...">
+                <a href="/loginn.html"><button class="logout-btn">Logout</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="header" class="header">
+            <div class="titles">
+                <h1 class="title-large">CÔNG CỤ TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+                <h3 class="title-small">Chỉ cần điền Tổng thu nhập, bạn sẽ biết ngay mức thuế TNCN phải nộp</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">Tổng thu nhập:</div>
+                    <div class="col-md-7"><input style="border-color: black;" name="" id="income" 
+                            placeholder="Tổng thu nhập" type="number" value="0">
+                    </div>
+                    <div class="col-md-2"><button type="button" class="btn btn-outline-primary" 
+                        onclick="calculateTax()">Tính
+                            thuế</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Số người phụ thuộc:</div>
+                    <div class="col-md-7"><input style="border-color: black;" name="" id="dependents"
+                            placeholder="Người phụ thuộc" type="number" value="0">
+                    </div>
+                    <div class="col-md-2"><button type="button" class="btn btn-outline-warning"
+                        onclick="re()">Reset</button></div>
+                </div>
+                <div class="row">
+                    <p id="warning" style="color: red;"></p>
+
+                    <table class="result-table">
+                        <tr>
+                            <th>Tổng thu nhập</th>
+                            <td id="totalIncome" ></td>
+                        </tr>
+                        <tr>
+                            <th>Giảm trừ cá nhân</th>
+                            <td>₫11,000,000</td>
+                        </tr>
+                        <tr>
+                            <th>Giảm trừ phụ thuộc</th>
+                            <td id="dependentDeduction"></td>
+                        </tr>
+                        <tr>
+                            <th>Số tiền tính thuế thu nhập cá nhân</th>
+                            <td id="taxableIncome"></td>
+                        </tr>
+                        <tr>
+                            <th>Thuế phải nộp</th>
+                            <td id="taxAmount"></td>
+                        </tr>
+                        <tr>
+                            <th>Số tiền được lĩnh sau thuế</th>
+                            <td id="netIncome"></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <th>Bậc</th>
+                            <th>Thu nhập tính thuế/tháng</th>
+                            <th>Thuế suất</th>
+                            <th>Số tiền</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Đến 5 triệu đồng (trđ)</td>
+                            <td>5%</td>
+                            <td id="taxBracket1"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>5tr < TN <=10tr</td>
+                            <td>10%</td>
+                            <td id="taxBracket2"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>10tr < TN <=18tr</td>
+                            <td>15%</td>
+                            <td id="taxBracket3"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>18tr < TN <=32tr</td>
+                            <td>20%</td>
+                            <td id="taxBracket4"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>32tr < TN <=52tr</td>
+                            <td>25%</td>
+                            <td id="taxBracket5"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>52tr < TN <=80tr</td>
+                            <td>30%</td>
+                            <td id="taxBracket6"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>TN > 80tr</td>
+                            <td>35%</td>
+                            <td id="taxBracket7"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </main>
+    <script src="/homepage.js"></script>
+    <script src="taxCacu.js"></script>
+</body>
+
+</html>
