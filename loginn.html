@@ -66,10 +66,25 @@
         <span style="font-size: 30px;order: 3;" class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         <strong>Đăng kí thành công tài khoản!</strong>
     </div>
+    <div class="alert fixed-top-right" id="errorSU1" style="display: none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <span style="font-size: 30px;order: 3;" class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Hãy nhập đúng định dạng Username!</strong>
+    </div>
+    <div class="alert fixed-top-right" id="errorSU2" style="display: none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <span style="font-size: 30px;order: 3;" class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Hãy nhập đúng định dạng Username và Realname!</strong>
+    </div>
+    <div class="alert fixed-top-right" id="errorSU3" style="display: none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <span style="font-size: 30px;order: 3;" class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Hãy nhập đúng định dạng Password!</strong>
+    </div>
     <h2>Sign in/up Form</h2>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="/Until/register.php" method="post">
+            <form id="registerForm" action="/Until/register.php" method="post">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -80,7 +95,7 @@
                 <input name="username" type="text" placeholder="Username" />
                 <input name="realName" type="text" placeholder="Real Name" />
                 <input name="password" type="password" placeholder="Password" />
-                <button>Sign Up</button>
+                <button id="btnSignUp">Sign Up</button>
                 
             </form>
         </div>

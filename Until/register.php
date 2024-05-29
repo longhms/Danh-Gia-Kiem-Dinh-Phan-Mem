@@ -9,6 +9,16 @@ function register_user($username, $realName, $password) {
     $db_password = ""; 
     $dbname = "dbQuanLyThue"; 
 
+    // Xác thực đầu vào
+    if (!isValidUsername($username) || !isValidRealName($realName)) {
+        header("Location: /loginn.html?errorSU2=1");
+        exit();
+    }
+    if (!isValidPassword($password)) {
+        header("Location: /loginn.html?errorSU3=1");
+        exit();
+    }
+
     // Tạo kết nối tới MySQL
     $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
@@ -36,9 +46,9 @@ function register_user($username, $realName, $password) {
         exit();
     } else {
         // Chèn user mới vào bảng tblUsers
-        $sql_insert_user = "INSERT INTO `tblUsers` (`id`, `username`, `realName`, `password`,`income`,`snpt`) VALUES ('$user_id', '$username', '$realName', '$password','$user_IC','$user_SNPT')";
+        $sql_insert_user = "INSERT INTO `tblUsers` (`id`, `username`, `realName`, `password`, `income`, `snpt`) VALUES ('$user_id', '$username', '$realName', '$password', '$user_IC', '$user_SNPT')";
         if ($conn->query($sql_insert_user) === TRUE) {
-            header("Location: /loginn.html?compSU=1"); // Chuyển hướng lại trang đăng nhập với tham số lỗi
+            header("Location: /loginn.html?compSU=1"); // Chuyển hướng lại trang đăng nhập với thông báo thành công
             exit();
         } else {
             echo "Lỗi khi đăng ký: " . $conn->error . "<br>";
@@ -55,5 +65,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $realName = $_POST['realName']; 
     $password = $_POST['password']; 
     register_user($username, $realName, $password);
+}
+
+function isValidUsername($username) {
+    return preg_match('/^[a-zA-Z0-9]+$/', $username) && trim($username) === $username;
+}
+
+function isValidRealName($realName) {
+    return preg_match('/^[a-zA-Z]+(\s[a-zA-Z]+)*$/', $realName) && trim($realName) === $realName;
+}
+
+function isValidPassword($password) {
+    return strlen($password) >= 8 && !preg_match('/\s/', $password) && trim($password) === $password;
 }
 ?>

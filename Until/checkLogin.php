@@ -19,6 +19,15 @@ function authenticate_user($username, $password) {
     $db_password = ""; // Mật khẩu MySQL
     $dbname = "dbQuanLyThue"; // Tên cơ sở dữ liệu
 
+    if (!isValidUsername($username)) {
+        header("Location: /loginn.html?errorSU1=1");
+        exit();
+    }
+    if (!isValidPassword($password)) {
+        header("Location: /loginn.html?errorSU3=1");
+        exit();
+    }
+
     // Tạo kết nối tới MySQL
     $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
@@ -57,5 +66,13 @@ function authenticate_user($username, $password) {
 $username = $_POST['username']; 
 $password = $_POST['password']; 
 authenticate_user($username, $password);
+
+function isValidUsername($username) {
+    return preg_match('/^[a-zA-Z0-9]+$/', $username) && trim($username) === $username;
+}
+
+function isValidPassword($password) {
+    return strlen($password) >= 8 && !preg_match('/\s/', $password) && trim($password) === $password;
+}
 ?>
 
