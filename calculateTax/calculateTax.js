@@ -1,6 +1,5 @@
 // calculateTax.js
 export function calculateTax(income, dependents) {
-    // Toàn bộ nội dung của hàm tính thuế như đã cung cấp ở trên
     if (isNaN(income) || income < 0 || isNaN(dependents) || dependents < 0) {
         return {
             warning: "Giá trị nhập vào phải là số nguyên dương!",

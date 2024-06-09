@@ -3,18 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "homepage.js",
+  "main": "index.js",
   "devDependencies": {
     "chai": "^5.1.1",
     "jest": "^29.7.0",
+<<<<<<< HEAD
     "mocha": "^10.4.0",
     "nyc": "^15.1.0"
+=======
+    "jest-environment-jsdom": "^29.7.0",
+    "mocha": "^10.4.0"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+>>>>>>> 0ec861bb7287a50d478369034d5f5c07b8acb09d
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "scripts": {
     "test": "mocha --coverage",
     "coverage": "nyc npm test"
+=======
+  "dependencies": {
+    "jsdom": "^24.1.0"
+>>>>>>> 0ec861bb7287a50d478369034d5f5c07b8acb09d
   }
 }

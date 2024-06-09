@@ -16,5 +16,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "nyc": {
+    "include": ["F:/Vs code/Danh-Gia-Kiem-Dinh-Phan-Mem/calculateTax/calculateTax.js"],
+    "reporter": ["text", "html"]
+  }
+
 }
